@@ -107,7 +107,7 @@ app.post('/upload', upload.single('document'), async (req, res) => {
         };
 
         await uploadAndEncryptDocument(user, uploadedDocument);
-        await contractInteraction.createDocument('0x' + documentDetails._id, '0x' + encryptionKey, { gas: 2000000 });
+        await contractInteraction.createDocument('0x' + documentDetails._id, '0x' + encryptionKey, { gas: 200   0000 });
 
         res.json({ message: 'Document uploaded and encrypted successfully' });
     } catch (error) {
